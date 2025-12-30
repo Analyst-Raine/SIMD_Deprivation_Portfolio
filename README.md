@@ -1,4 +1,6 @@
 # SIMD & Deprivation Analysis — Scotland (Case Study: Aberdeen)
+
+![](outputs/Scotland.jpg)
 ## Project Overview
 
 This project investigates deprivation patterns in Aberdeen, Scotland using the Scottish Index of Multiple Deprivation (SIMD 2020) dataset.
@@ -72,9 +74,12 @@ Cluster	Label	Meaning
 
 These are interpretation labels, not official SIMD classifications.
 
-Key Results
-## Finding 1: Aberdeen vs Scotland — Summary
-### Domain	Aberdeen vs Scotland	Summary
+## Maps
+![](outputs/Aberdeen.jpg)
+
+## Key Results
+### Finding 1: Aberdeen vs Scotland — Summary
+ Domain	Aberdeen vs Scotland	Summary
 * Income:	Mixed but mostly better - 	Stronger earnings & workforce profile
 * Employment:	Better in most clusters	- Job market resilience
 * Health: 	Better in affluent area worse in deprived areas	- Urban health inequality
@@ -83,10 +88,12 @@ Key Results
 * Crime: Worse in high-deprivation areas	- Urban pressure effects
 * Housing: 	Consistently worse-	Most significant deprivation driver
 
+  ![](outputs/Abdn_Scot_Housing.jpeg)
+
 ## Finding 2 — What Drives Deprivation in Aberdeen
 
-<img src = "Maps/Housing.pdf
 
+![](outputs/Housing.jpg)
 ### Aberdeen's deprivation pattern is different from national structure:
 
 Key Drivers of Deprivation
