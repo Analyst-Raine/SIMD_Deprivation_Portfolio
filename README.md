@@ -78,6 +78,9 @@ These are interpretation labels, not official SIMD classifications.
 ![](outputs/Aberdeen.jpg)
 
 ## Key Results
+
+![](outputs/Scotland_Abdn_by_Cluster.jpg)
+
 ### Finding 1: Aberdeen vs Scotland — Summary
  Domain	Aberdeen vs Scotland	Summary
 * Income:	Mixed but mostly better - 	Stronger earnings & workforce profile
