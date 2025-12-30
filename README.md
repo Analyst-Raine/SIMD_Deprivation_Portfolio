@@ -5,19 +5,19 @@ This project investigates deprivation patterns in Aberdeen, Scotland using the S
 
 The goal is to evaluate:
 
-How Aberdeen compares to national deprivation patterns
+* How Aberdeen compares to national deprivation patterns
 
-Which domains (housing, crime, education, etc.) drive local inequality
+* Which domains (housing, crime, education, etc.) drive local inequality
 
-Where Aberdeen is better or worse than Scotland on average
+* Where Aberdeen is better or worse than Scotland on average
 
 This is a portfolio project to demonstrate skills — not academic research.
 
 ## Tools Used
 ### Tool -  Purpose
-R / RStudio - 	Data wrangling, cluster analysis, interpretation
-K-Means (k=4) - 	Grouping Data Zones by deprivation similarity
-QGIS	- Mapping spatial outputs & cluster patterns
+* R / RStudio - 	Data wrangling, cluster analysis, interpretation
+* K-Means (k=4) - 	Grouping Data Zones by deprivation similarity
+* QGIS	- Mapping spatial outputs & cluster patterns
 
 
 ## Data
@@ -26,19 +26,19 @@ Source: SIMD 2020 — Data Zone Level (Scotland)
 
 7 Domains Used
 
-Income
+* Income
 
-Employment
+* Employment
 
-Health
+* Health
 
-Education
+* Education
 
-Access to Services
+* Access to Services
 
-Crime
+* Crime
 
-Housing
+* Housing
 
 Important Ranking Rule
 
@@ -65,42 +65,44 @@ Export maps (GeoPackage) & insights
 
 ## Cluster Labels
 Cluster	Label	Meaning
-1	Low Deprivation - 	Affluent, strong across domains, slightly lower on access
-2	Moderate Urban Deprivation- Middle-range urban outcomes
-3	High Urban Deprivation	- Severe deprivation across domains
-4	Mixed Urban Deprivation	- Uneven profile; fluctuating strengths
+* 1	Low Deprivation - 	Affluent, strong across domains, slightly lower on access
+* 2	Moderate Urban Deprivation- Middle-range urban outcomes
+* 3	High Urban Deprivation	- Severe deprivation across domains
+* 4	Mixed Urban Deprivation	- Uneven profile; fluctuating strengths
 
 These are interpretation labels, not official SIMD classifications.
 
 Key Results
 ## Finding 1: Aberdeen vs Scotland — Summary
 ### Domain	Aberdeen vs Scotland	Summary
-Income:	Mixed but mostly better - 	Stronger earnings & workforce profile
-Employment:	Better in most clusters	- Job market resilience
-Health: 	Better in affluent area worse in deprived areas	- Urban health inequality
-Education: 	Slightly stronger	- slightly worse in deprived areas
-Access:	Better in every cluster	- Transport/service access not a barrier
-Crime: Worse in high-deprivation areas	- Urban pressure effects
-Housing: 	Consistently worse-	Most significant deprivation driver
+* Income:	Mixed but mostly better - 	Stronger earnings & workforce profile
+* Employment:	Better in most clusters	- Job market resilience
+* Health: 	Better in affluent area worse in deprived areas	- Urban health inequality
+* Education: 	Slightly stronger	- slightly worse in deprived areas
+* Access:	Better in every cluster	- Transport/service access not a barrier
+* Crime: Worse in high-deprivation areas	- Urban pressure effects
+* Housing: 	Consistently worse-	Most significant deprivation driver
 
 ## Finding 2 — What Drives Deprivation in Aberdeen
+
+<img src = "Maps/Housing.pdf
 
 ### Aberdeen's deprivation pattern is different from national structure:
 
 Key Drivers of Deprivation
-Housing Inequality -	Systematically worse than Scotland across all clusters
-Urban Health Outcomes	- Sharp health gaps in deprived zones
-Concentrated Urban Deprivation - High deprivation cluster significantly lower ranked
+* Housing Inequality -	Systematically worse than Scotland across all clusters
+* Urban Health Outcomes	- Sharp health gaps in deprived zones
+* Concentrated Urban Deprivation - High deprivation cluster significantly lower ranked
 
 ### Not key drivers (in Aberdeen):
 
-Geography
+* Geography
 
-Transport / Access
+* Transport / Access
 
-Rural isolation
+* Rural isolation
 
-## Finding 3 — Corrected Access Insight
+## Finding 3 — Access Insight
 
 Aberdeen is better than Scotland for access to services in every cluster.
 
@@ -108,12 +110,12 @@ This contradicts common assumptions about northern/peripheral cities and shows s
 
 ## Conclusion
 
-Aberdeen’s deprivation is driven by urban inequality, not geography.
+* Aberdeen’s deprivation is driven by urban inequality, not geography.
 
-Strong polarisation between affluent & deprived zones
+* Strong polarisation between affluent & deprived zones
 
-Some areas exceed national outcomes — others fall far below
+* Some areas exceed national outcomes — others fall far below
 
-Housing is the clearest intervention opportunity
+* Housing is the clearest intervention opportunity
 
-Access is a strength, not a barrier
+  
