@@ -76,7 +76,7 @@ working_data$Cluster_Label <- factor(
 # ----------------------------
 
 # Group working data by the clusters created earlier and the names
-# summarise accross the columns, by taking the mean of each column and creates a
+# summarise across the columns, by taking the mean of each column and creates a
 # new column called avg_ the original column name
 cluster_summary <- working_data %>%
   group_by(Cluster, Cluster_Label) %>%
@@ -93,7 +93,7 @@ kable(prop.table(table(cluster_summary$Cluster_Label)) * 100)
 
 # keep all rows in smid_data and only bring matching rows from working data
 # Datazone is the key
-smid_clusters <- simd_data %>%
+sd_clusters <- simd_data %>%
   left_join(working_data, by = "DataZone")  # Include numeric columns + clusters
 
 # ----------------------------
@@ -175,6 +175,34 @@ st_write(smid_clusters, "scottish deprivation atlas/outputs/simd_clusters_scotla
 st_write(aberdeen, "scottish deprivation atlas/outputs/aberdeen_clusters.gpkg", delete_dsn = TRUE)
 
 
-# ============================
-# ✅ Workflow Complete
-# ============================
+ # create plots
+
+# Add a column to identify the location
+scotland_long <- cluster_summary %>%
+  mutate(Location = "Scotland") %>%
+  pivot_longer(cols = starts_with("avg_"), 
+               names_to = "Domain", 
+               values_to = "Value") %>%
+  mutate(Domain = gsub("avg_", "", Domain))
+
+aberdeen_long <- aberdeen_summary %>%
+  mutate(Location = "Aberdeen") %>%
+  pivot_longer(cols = starts_with("avg_"), 
+               names_to = "Domain", 
+               values_to = "Value") %>%
+  mutate(Domain = gsub("avg_", "", Domain))
+
+combined <- bind_rows(scotland_long, aberdeen_long)
+
+ggplot(combined, aes(x = Domain, y = Value, fill = Location)) +
+  geom_col(position = "dodge") +
+  facet_wrap(~Cluster_Label) +
+  scale_fill_manual(values = c("Scotland" = "#11577a", "Aberdeen" = "#ad3027")) +
+  labs(title = "Scotland vs Aberdeen by Domain and Cluster",
+       y = "Average Rank (Higher = Better)",
+       x = "Domain") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+
